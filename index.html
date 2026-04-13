@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlatMate | Find Your Ideal Flatmate</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">FlatMate</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#help">Help</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="panel hero">
+        <h1>Welcome to FlatMate</h1>
+        <p>
+          Share your preferences to discover compatible flatmates in Greater
+          Noida.
+        </p>
+
+        <form id="flatmateForm" class="form-grid">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Enter your name" required />
+          </label>
+
+          <label>
+            Study / Profession
+            <input
+              type="text"
+              name="study"
+              placeholder="e.g. B.Tech, MBA, Working Professional"
+              required
+            />
+          </label>
+
+          <label>
+            Monthly Budget (INR)
+            <input
+              type="number"
+              name="budget"
+              placeholder="e.g. 9000"
+              min="1000"
+              required
+            />
+          </label>
+
+          <label>
+            Daily Reading Time
+            <input type="text" name="readingTime" placeholder="e.g. 1 hour" required />
+          </label>
+
+          <label>
+            Bed Time
+            <input type="time" name="bedTime" required />
+          </label>
+
+          <label>
+            Good Habits
+            <textarea
+              name="goodHabits"
+              rows="3"
+              placeholder="e.g. clean room, no loud music"
+              required
+            ></textarea>
+          </label>
+
+          <label>
+            Bad Habits
+            <textarea
+              name="badHabits"
+              rows="3"
+              placeholder="e.g. snores, late-night calls"
+              required
+            ></textarea>
+          </label>
+
+          <label>
+            Residence Location (Greater Noida)
+            <input
+              type="text"
+              name="location"
+              placeholder="e.g. Alpha 1, Pari Chowk"
+              required
+            />
+          </label>
+
+          <button type="submit">Save Preferences</button>
+        </form>
+
+        <article id="result" class="result" aria-live="polite"></article>
+      </section>
+
+      <section id="about" class="panel">
+        <h2>About</h2>
+        <p>
+          FlatMate helps students and working professionals in Greater Noida
+          compare lifestyle preferences before moving in together.
+        </p>
+      </section>
+
+      <section id="help" class="panel">
+        <h2>Help</h2>
+        <ul>
+          <li>Fill all fields in the Home form.</li>
+          <li>Click <strong>Save Preferences</strong>.</li>
+          <li>Review your submitted details instantly below the form.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
